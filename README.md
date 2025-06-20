@@ -39,7 +39,7 @@ Ensure all prerequisites are installed.
 Run each script individually:
 
 '''python 
-  galaxytop.py
+galaxytop.py
 
 or
 
