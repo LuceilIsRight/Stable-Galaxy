@@ -34,7 +34,7 @@ Key Features:
 
 Viewpoint: Angled (20° elevation, 60° azimuth) for a 3D perspective.\
 Higher star count: 400,000 stars in the spiral arms for increased density.\
-Other features (spiral arms, bulge, colors, velocities, animation) are identical to galaxytop.py except for slightly adjusted noise parameters for arm spread.\
+Other features (spiral arms, bulge, colors, velocities, animation) are identical to galaxytop.py except for slightly adjusted noise parameters for arm spread.
 
 # Usage
 
