@@ -38,11 +38,11 @@ Ensure all prerequisites are installed.
 
 Run each script individually:
 
-python 
----------------------------------------------------
-galaxytop.py
+'''python 
+  galaxytop.py
 
 or
+
 python
 -----------------------------------------------------
 galaxyangled.py
