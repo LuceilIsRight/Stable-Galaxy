@@ -20,21 +20,21 @@ This script generates a top-down view of a rotating spiral galaxy with 40,000 st
 
 Key Features:
 
-Viewpoint: Top-down (90° elevation).
-Spiral arms: 6 logarithmic spirals with added noise for realism.
-Central bulge: Spherical distribution of stars.
-Color gradient: Red-to-yellow in the bulge, transitioning to blue in the outer arms.
-Star sizes: Varied for a glowing effect.
-Velocity: Tangential velocities of 1278 km/s for arm stars and 20% of that for bulge stars.
+Viewpoint: Top-down (90° elevation).\
+Spiral arms: 6 logarithmic spirals with added noise for realism.\
+Central bulge: Spherical distribution of stars.\
+Color gradient: Red-to-yellow in the bulge, transitioning to blue in the outer arms.\
+Star sizes: Varied for a glowing effect.\
+Velocity: Tangential velocities of 1278 km/s for arm stars and 20% of that for bulge stars.\
 Animation: Stars move in circular orbits, with positions wrapped to stay within the galaxy's radius.
 
 ## galaxyangled.py
 This script is similar to galaxytop.py but renders the galaxy from an angled perspective (20° elevation, 60° azimuth) with 400,000 stars in the spiral arms for a denser appearance. The output is saved as galaxy_rotation_angled.mp4.
 Key Features:
 
-Viewpoint: Angled (20° elevation, 60° azimuth) for a 3D perspective.
-Higher star count: 400,000 stars in the spiral arms for increased density.
-Other features (spiral arms, bulge, colors, velocities, animation) are identical to galaxytop.py except for slightly adjusted noise parameters for arm spread.
+Viewpoint: Angled (20° elevation, 60° azimuth) for a 3D perspective.\
+Higher star count: 400,000 stars in the spiral arms for increased density.\
+Other features (spiral arms, bulge, colors, velocities, animation) are identical to galaxytop.py except for slightly adjusted noise parameters for arm spread.\
 
 # Usage
 
