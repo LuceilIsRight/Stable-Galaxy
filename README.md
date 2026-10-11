@@ -1,65 +1,76 @@
 # Stable-Galaxy
 
-A Python visualisation project that creates animated, three-dimensional spiral galaxies using NumPy and Matplotlib.
+A Python visualisation project for generating animated, three-dimensional spiral-galaxy-style scenes.
 
-The project explores how particle distributions, spiral-arm geometry, colour gradients, and camera perspectives can be combined to create compelling astronomical-style animations.
+The project uses numerical arrays and plotting tools to create a particle-based representation of a galaxy. It explores spiral geometry, colour, perspective, and animation through computational graphics.
 
-**Project type:** Scientific visualisation / procedural animation
+![Python](https://img.shields.io/badge/Python-3776AB?style=flat&logo=python&logoColor=white)
+![NumPy](https://img.shields.io/badge/NumPy-013243?style=flat&logo=numpy&logoColor=white)
+![Matplotlib](https://img.shields.io/badge/Visualisation-Matplotlib-11557C?style=flat&logo=plotly&logoColor=white)
+
+> **Project type:** Scientific-style visualisation. Do not interpret the generated scene as a self-consistent galactic dynamics simulation unless the underlying physics has been implemented and validated accordingly.
+
+---
+
+## Contents
+
+- [Overview](#overview)
+- [Preview](#preview)
+- [Features](#features)
+- [Technology Stack](#technology-stack)
+- [Installation](#installation)
+- [Running the Animations](#running-the-animations)
+- [Customisation](#customisation)
+- [Scientific Interpretation](#scientific-interpretation)
+- [Roadmap](#roadmap)
+- [Licence](#licence)
+
+---
+
+## Overview
+
+Spiral galaxies have distinctive structures that can be explored through computational visualisation.
+
+Stable-Galaxy uses Python-based graphics to create an animated representation of a spiral-galaxy-like distribution. Its focus is on visual structure and presentation rather than claiming to reproduce the complete physical evolution of a real galaxy.
+
+## Preview
+
+Add an actual rendered frame or animation from the repository here.
+
+<!-- Replace the placeholder below with a committed image or GIF. -->
+<!-- Example: ![Stable-Galaxy preview](docs/images/stable-galaxy.gif) -->
+
+**Suggested preview:** one still image showing the spiral structure and one short animation demonstrating the available camera perspective.
 
 ## Features
 
-- Generates a spiral-galaxy-style particle distribution.
-- Creates a central bulge and spiral arms.
-- Supports top-down and angled viewing perspectives.
-- Uses colour gradients and particle sizes to create a glowing visual effect.
-- Animates particle positions over time.
-- Exports MP4 animations when FFmpeg is installed.
-- Uses NumPy and Matplotlib for numerical operations and rendering.
+The repository has been described as containing separate scripts for different viewing perspectives. Confirm the filenames and available options against the current source.
 
-## Example Views
+- Spiral-galaxy-style particle visualisation.
+- Three-dimensional rendering, where supported by the script.
+- Animated output.
+- Customisable visual parameters, where exposed by the implementation.
+- Optional MP4 output, if configured and supported by the local rendering environment.
 
-The project contains two main scripts:
+## Technology Stack
 
-| Script | Intended view |
+| Technology | Purpose |
 |---|---|
-| `galaxytop.py` | Top-down galaxy view |
-| `galaxyangled.py` | Angled three-dimensional perspective |
-
-The scripts are configured to produce the following output files:
-
-- `galaxy_rotation_top.mp4`
-- `galaxy_rotation_angled.mp4`
-
-Actual output names may depend on the version of the source code.
-
-## Technologies
-
-- Python
-- NumPy
-- Matplotlib
-- FFmpeg for MP4 encoding
-- `ffmpeg-python` where used by the script
-
-## Requirements
-
-Install Python and pip. The project has been documented with these dependencies:
-
-- NumPy
-- Matplotlib
-- `ffmpeg-python` for the optional Python interface to FFmpeg
-
-FFmpeg itself must also be installed and accessible on your PATH for MP4 export.
+| Python | Main programming language |
+| NumPy | Numerical array operations |
+| Matplotlib | Plotting and animation |
+| FFmpeg | MP4 encoding, if used by the output pipeline |
 
 ## Installation
 
-Clone the repository:
+### 1. Clone the repository
 
 ```bash
 git clone https://github.com/LuceilIsRight/Stable-Galaxy.git
 cd Stable-Galaxy
 ```
 
-Create a virtual environment.
+### 2. Create a virtual environment
 
 **Windows (PowerShell):**
 
@@ -75,73 +86,74 @@ python3 -m venv .venv
 source .venv/bin/activate
 ```
 
-Install the Python dependencies:
+### 3. Install dependencies
+
+For scripts that use NumPy and Matplotlib:
 
 ```bash
 python -m pip install --upgrade pip
-python -m pip install numpy matplotlib ffmpeg-python
+python -m pip install numpy matplotlib
 ```
 
-Verify FFmpeg is available:
-
-```bash
-ffmpeg -version
-```
+If the source imports additional packages, install them too. If MP4 export is supported, make sure FFmpeg is installed and accessible from your terminal.
 
 ## Running the Animations
 
-Generate the top-down view:
+Use the actual script names present in the repository.
+
+For example, if the repository contains `galaxytop.py` and `galaxyangled.py`, run:
 
 ```bash
 python galaxytop.py
 ```
 
-Generate the angled view:
+and:
 
 ```bash
 python galaxyangled.py
 ```
 
-The scripts generate their configured animations. Depending on your environment, the animation may be saved to a video file, displayed interactively, or both.
-
-If rendering is slow, start with a smaller particle count and lower output resolution. Increase the workload only after confirming that the script runs correctly.
+These commands are examples based on the documented script names; confirm that they match the current repository before publishing this section.
 
 ## Customisation
 
-The scripts contain parameters controlling aspects of the visualisation, including:
+Inspect the source code for the parameters supported by the current implementation. Common visualisation controls may include:
 
-- Number of particles in the arms and central bulge.
-- Spiral-arm geometry and noise.
-- Viewing angle and camera perspective.
-- Particle colours and apparent sizes.
+- Number of rendered particles.
+- Spiral-arm geometry.
+- Particle colour and apparent size.
+- Camera angle and viewing perspective.
 - Animation duration and frame rate.
 - Output resolution.
 
-Consult the source code for the exact variable names and current default values.
+Only document parameters that are actually configurable in the code.
 
 ## Scientific Interpretation
 
-**This project is primarily a procedural visualisation, not a self-consistent dynamical simulation of a real galaxy.**
+A spiral-galaxy-style image does not, by itself, establish that the system is gravitationally stable or that it accurately reproduces a real galaxy.
 
-The generated appearance is controlled by prescribed particle distributions and motion. The use of a spiral shape or orbital-looking motion does not establish that the model solves the equations governing galactic dynamics.
+A physically predictive galaxy simulation would require a defined dynamical model, appropriate initial conditions, numerical integration, and validation. If the current project uses prescribed particle positions or visual motion, describe it as a procedural or phenomenological visualisation.
 
-In particular, the current visualisation should not be interpreted as a quantitatively accurate model of stellar velocities, gravitational equilibrium, or long-term galaxy evolution without additional physical modelling and validation.
+This distinction makes the project's scope clear and helps viewers understand what the output demonstrates.
 
-This distinction is intentional: procedural visualisation can be useful for demonstrating geometry, producing educational material, and creating astronomical-style graphics.
+## Roadmap
 
-## Potential Improvements
+Potential future improvements — **not yet claimed as implemented**:
 
-- Add a configuration file for the main visual parameters.
-- Separate particle generation from animation and rendering.
-- Support reproducible configurations and command-line arguments.
-- Add tests for generated coordinates and parameter validation.
-- Document runtime and memory use at different particle counts.
-- Compare any future physical model against appropriate analytical or numerical benchmarks.
+- [ ] Add a committed example image and short animation.
+- [ ] Document the available visualisation parameters.
+- [ ] Add a reproducible configuration.
+- [ ] Separate particle generation from rendering.
+- [ ] Add command-line arguments for common settings.
+- [ ] Document runtime and memory requirements.
+- [ ] Add tests for generated coordinates and input parameters.
+- [ ] Investigate a physically motivated dynamical model as a separate development goal.
 
 ## Licence
 
-Check the repository's current licence before reusing or distributing the project. If no licence is present, add one only after confirming the ownership of all contributions.
+Check the repository's current licence before reusing or redistributing the code. If no licence is present, reuse permissions should not be assumed.
 
 ## Author
 
-[@LuceilIsRight](https://github.com/LuceilIsRight)
+[ @LuceilIsRight ](https://github.com/LuceilIsRight)
+
